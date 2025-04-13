@@ -1,0 +1,151 @@
+body, html {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    color: white;
+    height: 2000px;
+}
+
+::selection {
+    color: black;
+    background-color: pink;
+}
+
+.darkmode {
+    --textColor: white;
+    --bgColor: hsl(0, 0%, 10%);
+    --buttonBgColor: hsl(0, 0%, 20%);
+}
+:root {
+    --bgColor: hsl(0, 0%, 92%);
+    --textColor: black;
+    --buttonBgColor: hsl(0, 0%, 80%);
+    --mainColor: pink;
+}
+
+.spans {
+    color: var(--mainColor);
+}
+
+nav {
+    color: var(--textColor);
+}
+.navWidth {
+    width: 1400px;
+}
+
+.mainH1 {
+    font-size: "Roboto", sans-serif;
+}
+#subtext {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+.divs {
+    padding: 40px;
+    height: 100vh;
+}
+.secondDivs {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--textColor);
+}
+
+#container {
+    display: flex;
+}
+
+.navBtns {
+    margin: 0 10px;
+    color: var(--textColor);
+    background-color: var(--buttonBgColor);
+}
+#lastBtn {
+    margin-right: 0 !important;
+}
+
+.mainCont {
+    position: relative;
+    align-items: center;
+}
+
+.smallCont {
+    position: absolute;
+    left: 50%;
+    width: 1400px;
+    transform: translateX(-50%);
+    /*border: 5px solid rgba(147, 59, 158, 0.589);*/
+    padding: 0 !important;
+}
+
+.mainSmallConts {
+    position: relative;
+    font-size: 5rem;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    /*border: 1px solid black;*/
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.imgCont {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    width: 550px;
+    height: 550px;
+    transition: all .3s ease-in-out;
+}
+.imgCont img {
+    position: absolute;
+    height: 550px;
+    transition: all .3s ease-in-out;
+}
+
+#mainContText {
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*background-color: gray;*/
+    color: var(--textColor);
+    text-align: left !important;
+}
+#mainContText h1 {
+    font-size: 5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font-family: "Roboto";
+    transition: all .3s ease-in-out;
+}
+#mainContText h2 {
+    font-size: 2rem;
+    width: 700px;
+    transition: all .3s ease-in-out;
+}
+
+#actionBtn {
+    width: fit-content;
+    background-color: var(--mainColor);
+    color: hsl(0, 0%, 5%);
+    font-size: 1.75rem;
+    padding: 0 40px;
+    transition: all .3s ease-in-out;
+}
+#actionBtn:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}

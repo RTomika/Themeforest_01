@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1400px) {
+    .smallCont {
+        width: 1050px;
+    }
+    .imgCont {
+        width: 450px;
+        height: 450px;
+    }
+    .imgCont img {
+        height: 450px;
+    }
+    #mainContText h1 {
+        width: 600px;
+        font-size: 4rem;
+    }
+    #mainContText h2 {
+        font-size: 1.75rem;
+        width: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .smallCont {
+        width: 800px;
+    }
+    .imgCont {
+        width: 380px;
+        height: 380px;
+    }
+    .imgCont img {
+        height: 380px;
+    }
+    #mainContText h1 {
+        width: 600px;
+        font-size: 3rem;
+    }
+    #mainContText h2 {
+        font-size: 1.5rem;
+        width: 380px;
+    }
+}
