@@ -14,12 +14,14 @@ body, html {
     --textColor: white;
     --bgColor: hsl(0, 0%, 10%);
     --buttonBgColor: hsl(0, 0%, 20%);
+    --boxShadow: 2px 2px 12px hsla(0, 0%, 95%, 0.4);
 }
 :root {
     --bgColor: hsl(0, 0%, 92%);
     --textColor: black;
     --buttonBgColor: hsl(0, 0%, 80%);
-    --mainColor: pink;
+    --mainColor: rgb(238, 162, 174);
+    --boxShadow: 3px 3px 10px hsla(0, 0%, 0%, 0.4);
 }
 
 .spans {
@@ -59,10 +61,35 @@ h1 {
 }
 
 .navBtns {
+    position: relative;
     margin: 0 10px;
     color: var(--textColor);
-    background-color: var(--buttonBgColor);
+    background-color: transparent;
 }
+.navBtns::after, .navBtns::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    transition: all .3s ease-in-out;
+}
+.navBtns:hover::after, .navBtns:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+}
+.navBtns::before {
+    filter: blur(6px);
+}
+.navBtns:hover {
+    color: var(--textColor);
+}
+
 #lastBtn {
     margin-right: 0 !important;
 }
@@ -134,6 +161,7 @@ h1 {
 }
 #mainContText h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
     width: 700px;
     transition: all .3s ease-in-out;
 }
@@ -143,9 +171,34 @@ h1 {
     background-color: var(--mainColor);
     color: hsl(0, 0%, 5%);
     font-size: 1.75rem;
-    padding: 0 40px;
+    padding: 2px 40px;
     transition: all .3s ease-in-out;
 }
 #actionBtn:hover {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--boxShadow);
+}
+#featuresCont {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+#bigger, #smaller {
+    position: absolute;
+    font-family: "Roboto";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#bigger {
+    font-size: 9rem;
+    opacity: 0.04;
+}
+#smaller {
+    letter-spacing: 10px;
+    font-size: 5.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }

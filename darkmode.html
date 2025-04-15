@@ -12,29 +12,31 @@
     <link rel="stylesheet" href="CSS/responsive.css">
     <title>Saas Landing Page</title>
 </head>
-<body>
+<body class="darkmode">
 
   <!--Navbar-->
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid navWidth">
+          <span class="navbar-brand mb-0 h1">Navbar</span>
 
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid navWidth">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+          <div class="ms-auto">
+              <button class="btn navBtns">Product</button>
+              <button class="btn navBtns">About</button>
+              <button id="lastBtn" class="btn navBtns">Contact</button>
+          </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="ms-auto">
-            <button class="btn navBtns">Product</button>
-            <button class="btn navBtns">About</button>
-            <button id="lastBtn" class="btn navBtns">Contact</button>
-        </div>
-    </div>
-  </nav>
+  <!--Hero Section-->
     
   <div class="row divs mainCont">
-
     <div class="row smallCont">
       <div class="col-md-6 mainSmallConts">
         <div id="mainContText">
           <h1 id="mainH1">Manage Everything <span class="spans">Effortlessly</span></h1>
-          <h2 id="subtext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga non esse blanditiis debitis adipisci, voluptate veniam soluta impedit nobis deleniti, quae enim excepturi facere error aut.</h2>
+          <h2 id="subtext">Whether you're running a digital agency or consulting clients, SDA helps you stay organized, communicate seamlessly, and deliver exceptional results every time.</h2>
           <button id="actionBtn" type="button" class="btn">Purchase</button>
         </div>
       </div>
@@ -42,10 +44,15 @@
         <div class="imgCont">
           <img src="/home/tomika/Themeforest/project_01/Images/FMC.svg" alt="Logo">
         </div>
-
       </div>
     </div>
   </div>
+
+  <!--Features Section-->
+<div id="featuresCont">
+  <h1 id="bigger">What We Offer</h1>
+  <h1 id="smaller"><span class="spans">Features</span></h1>
+</div>
 
     <div class="row">
       <div class="col-md-6 divs secondDivs">
