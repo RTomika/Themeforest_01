@@ -17,6 +17,20 @@
         font-size: 1.75rem;
         width: 500px;
     }
+    .featContent i {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .featContent h1 {
+        font-size: 2.5rem;
+    }
+    .featContent p {
+        line-height: 1;
+        font-size: 1.75rem;
+    }
+    .featuresDivs {
+        height: 700px;
+    }
 }
 
 
@@ -38,5 +52,34 @@
     #mainContText h2 {
         font-size: 1.5rem;
         width: 380px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .featContent {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+    }
+    .featuresDivs {
+        height: 700px !important;
+    }
+    #mainContText {
+        bottom: 0;
+        height: 400px;
+        text-align: center;
+        align-items: center;
+    }
+    #mainH1 {
+        text-align: center;
+    }
+    #subtext {
+        text-align: center;
+    }
+    #actionBtn {
+        width: 90vw;
+    }
+    .mainSmallConts {
+        height: 60vh;
     }
 }

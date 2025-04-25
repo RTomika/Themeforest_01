@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, hsl(0, 0%, 95%), hsl(0, 0%, 30%));
+    background: linear-gradient(to bottom, hsl(0, 0%, 90%), hsl(0, 0%, 40%));
     background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;

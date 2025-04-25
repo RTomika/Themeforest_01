@@ -1,8 +1,9 @@
 body, html {
     background-color: var(--bgColor);
     color: var(--textColor);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     color: white;
-    height: 2000px;
 }
 
 ::selection {
@@ -18,10 +19,18 @@ body, html {
 }
 :root {
     --bgColor: hsl(0, 0%, 92%);
+    --bgColorReverse: hsl(0, 0%, 10%);
     --textColor: black;
+    --textColorReverse: white;
     --buttonBgColor: hsl(0, 0%, 80%);
     --mainColor: rgb(238, 162, 174);
+    --mainColorSlight: rgba(238, 162, 173, 0.2);
+    --mainColorHover: rgb(211, 133, 145);
     --boxShadow: 3px 3px 10px hsla(0, 0%, 0%, 0.4);
+}
+
+.show {
+    opacity: 1 !important;
 }
 
 .spans {
@@ -36,7 +45,7 @@ nav {
 }
 
 .mainH1 {
-    font-size: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 #subtext {
     font-family: "Inter", sans-serif;
@@ -47,8 +56,78 @@ nav {
     padding: 40px;
     height: 100vh;
 }
-.secondDivs {
-    border: 1px solid black;
+.featuresDivs {
+    position: relative;
+    height: 140vh !important;
+    /*border: 3px solid white;*/
+}
+.featContent {
+    position: absolute;
+    width: 30vw;
+    opacity: 0;
+    /*height: 400px;*/
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 20px;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 15%);
+    transition: all .3s ease-in-out;
+}
+.featContent:hover {
+    background-color: hsla(0, 0%, 15%, 0.4);
+    border: 2px solid white;
+}
+
+.featContent i {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: var(--mainColor);
+}
+.featContent h1 {
+    color: var(--textColorReverse);
+    font-size: 3rem;
+}
+.featContent p {
+    color: var(--textColorReverse);
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.featContent1 {
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.featContent2 {
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+.featContent3 {
+    bottom: 0;
+    margin-bottom: 60px;
+}
+
+.section2 {
+    position: relative;
+    background-color: var(--bgColorReverse);
+    overflow: hidden !important;
+}
+.section2::before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--mainColorSlight), transparent, transparent);
+    width: 3500px;
+    height: 3500px;
+    transition: 0.4s, top 0.1s, left 0.1s;
+}
+.section2:hover::before {
+    opacity: 1;
 }
 
 h1 {
@@ -63,6 +142,7 @@ h1 {
 .navBtns {
     position: relative;
     margin: 0 10px;
+    z-index: 2222;
     color: var(--textColor);
     background-color: transparent;
 }
@@ -177,14 +257,15 @@ h1 {
 #actionBtn:hover {
     box-shadow: var(--boxShadow);
 }
-#featuresCont {
+.between {
     position: relative;
     width: 100%;
+    margin: 40px;
     height: 200px;
     text-align: center;
 }
 
-#bigger, #smaller {
+.bigger, .smaller {
     position: absolute;
     font-family: "Roboto";
     left: 50%;
@@ -192,13 +273,92 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-#bigger {
+.bigger {
     font-size: 9rem;
+    width: 1500px;
     opacity: 0.04;
 }
-#smaller {
+.smaller {
     letter-spacing: 10px;
     font-size: 5.5rem;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pen, .lightning, .headset {
+    font-size: 2rem;
+    color: black;
+    z-index: 3;
+}
+
+.starsUl {
+    display: flex;
+    gap: 5px;
+    list-style-type: none;
+    padding: 0;
+}
+.stars {
+    color: rgb(231, 189, 52);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+
+.wrapper {
+    position: relative;
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin: 4vw 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+.item {
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    left: max(calc(500px * 4), 100%);
+    background-color: var(--mainColor);
+    border-radius: 6px;
+    animation-name: scrollLeft;
+    animation-timing-function: linear;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    padding: 40px;
+    color: black !important;
+    transition: all .3s ease-in-out;
+}
+.item h1 {
+    color: black;
+    font-size: 3rem;
+    font-family: "Roboto";
+}
+.item p {
+    font-size: 2rem;
+    font-family: "Inter";
+    line-height: 1.1;
+}
+.item:hover {
+    background-color: var(--mainColorHover);
+    cursor: pointer;
+}
+
+.item1 {animation-delay: calc(50s / 4 * (4 - 1) * -1);}
+.item2 {animation-delay: calc(50s / 4 * (4 - 2) * -1);}
+.item3 {animation-delay: calc(50s / 4 * (4 - 3) * -1);}
+.item4 {animation-delay: calc(50s / 4 * (4 - 4) * -1);}
+
+@keyframes scrollLeft {
+    to{
+        left: -500px;
+    }
 }

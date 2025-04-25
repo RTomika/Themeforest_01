@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="CSS/fontawesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/main.css">
@@ -22,7 +23,7 @@
 
           <div class="ms-auto">
               <button class="btn navBtns">Product</button>
-              <button class="btn navBtns">About</button>
+              <a href="#section2"><button class="btn navBtns">About</button></a>
               <button id="lastBtn" class="btn navBtns">Contact</button>
           </div>
       </div>
@@ -49,17 +50,86 @@
   </div>
 
   <!--Features Section-->
-<div id="featuresCont">
-  <h1 id="bigger">What We Offer</h1>
-  <h1 id="smaller"><span class="spans">Features</span></h1>
+<div class="between">
+  <h1 class="bigger">What We Offer</h1>
+  <h1 class="smaller"><span class="spans">Features</span></h1>
 </div>
 
-    <div class="row">
-      <div class="col-md-6 divs secondDivs">
-        <h1>First content</h1>
+    <div id="section2" class="row section2">
+      <div class="col-md-4 featuresDivs featureDiv1 scroll">
+        <div class="featContent featContent1 scroll">
+          <i class="fa-solid fa-pen pen"></i>
+          <h1>Easily Editable</h1>
+          <p>Our content is made in a way that complete beginners are easily able to change the site's colors, texts, fonts, pictures, etc.</p>
+        </div>
       </div>
-      <div class="col-md-6 divs secondDivs">
-        <h1>Second content</h1>
+      <div class="col-md-4 featuresDivs featureDiv2">
+        <div class="featContent featContent2 scroll">
+          <i class="fa-solid fa-bolt lightning"></i>
+          <h1>Fast Performance</h1>
+          <p>Our site is optimized to load in seconds, ensuring a smooth and seamless experience even on slower devices or networks.</p>
+        </div>
+      </div>
+      <div class="col-md-4 featuresDivs featureDiv3">
+        <div class="featContent featContent3 scroll">
+          <i class="fa-solid fa-headset headset"></i>
+          <h1>Friendly Support</h1>
+          <p>We're here to help with quick, clear answers — whether you're stuck on a feature or just have a question, our team is always happy to assist.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Reviews-->
+
+    <div class="between">
+      <h1 class="bigger">From The People</h1>
+      <h1 class="smaller"><span class="spans">Reviews</span></h1>
+    </div>
+
+
+    <div class="wrapper line">
+      <div class="item item1">
+        <h1>Tiffany</h1>
+        <p>I really enjoyed your service for how easy it is to use and effective at the same time! Thank you!</p>
+        <ul class="starsUl">
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+        </ul>
+      </div>
+      <div class="item item2">
+        <h1>Mark</h1>
+        <p>For the price, I doubt you can get any other service like this at the same quality! Support is fast and great too!</p>
+        <ul class="starsUl">
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star-half stars"></i></li>
+        </ul>
+      </div>
+      <div class="item item3">
+        <h1>Chiara</h1>
+        <p>Design was acceptable, but I personally think it could improve a bit. Overall, the service is usable.</p>
+        <ul class="starsUl">
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star-half stars"></i></li>
+        </ul>
+      </div>
+      <div class="item item4">
+        <h1>John</h1>
+        <p>Thank you for making such a useful tool! I couldn't imagine my business without this service!</p>
+        <ul class="starsUl">
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+          <li><i class="fa-solid fa-star stars"></i></li>
+        </ul>
       </div>
     </div>
 
