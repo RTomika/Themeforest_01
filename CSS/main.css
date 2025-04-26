@@ -23,9 +23,9 @@ body, html {
     --textColor: black;
     --textColorReverse: white;
     --buttonBgColor: hsl(0, 0%, 80%);
-    --mainColor: rgb(238, 162, 174);
-    --mainColorSlight: rgba(238, 162, 173, 0.2);
-    --mainColorHover: rgb(211, 133, 145);
+    --mainColor: #ffbccc;
+    --mainColorSlight: #ffbccc60;
+    --mainColorHover: #e6b4bf;
     --boxShadow: 3px 3px 10px hsla(0, 0%, 0%, 0.4);
 }
 
@@ -260,7 +260,7 @@ h1 {
 .between {
     position: relative;
     width: 100%;
-    margin: 40px;
+    margin: 40px 0;
     height: 200px;
     text-align: center;
 }
@@ -301,6 +301,11 @@ h1 {
     color: rgb(231, 189, 52);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
+    transition: all .2s ease-in-out;
+}
+.stars:hover {
+    color: rgb(245, 204, 71);
+    transform: scale(1.05);
 }
 
 
@@ -309,9 +314,9 @@ h1 {
     border: none;
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 400px;
     margin: 4vw 0;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: all 1s ease-in-out;
     mask-image: linear-gradient(
         to right,
@@ -325,10 +330,10 @@ h1 {
 .item {
     position: absolute;
     width: 500px;
-    height: 350px;
+    height: 400px;
     left: max(calc(500px * 4), 100%);
     background-color: var(--mainColor);
-    border-radius: 6px;
+    border-radius: 25px;
     animation-name: scrollLeft;
     animation-timing-function: linear;
     animation-duration: 50s;
@@ -350,6 +355,20 @@ h1 {
 .item:hover {
     background-color: var(--mainColorHover);
     cursor: pointer;
+}
+.item img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 25px 40px;
+    height: 120px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    width: 120px;
+    border-radius: 100%;
+    transition: all .2s ease-in-out;
+}
+.item img:hover {
+    transform: scale(1.1);
 }
 
 .item1 {animation-delay: calc(50s / 4 * (4 - 1) * -1);}

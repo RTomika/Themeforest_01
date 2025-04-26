@@ -17,6 +17,12 @@
         font-size: 1.75rem;
         width: 500px;
     }
+    .bigger {
+        font-size: 7rem;
+    }
+    .smaller {
+        font-size: 5rem;
+    }
     .featContent i {
         font-size: 2.5rem;
         margin-bottom: 10px;
@@ -49,6 +55,15 @@
         width: 600px;
         font-size: 3rem;
     }
+    .bigger {
+        font-size: 6rem;
+    }
+    .smaller {
+        font-size: 4rem;
+    }
+    .between {
+        margin: 20px 0;
+    }
     #mainContText h2 {
         font-size: 1.5rem;
         width: 380px;
@@ -59,10 +74,16 @@
     .featContent {
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 500px;
+        width: 90vw;
+    }
+    .featContent1 {
+        margin-left: 0;
+    }
+    .featContent3 {
+        margin-bottom: 0;
     }
     .featuresDivs {
-        height: 700px !important;
+        height: 600px !important;
     }
     #mainContText {
         bottom: 0;
@@ -81,5 +102,36 @@
     }
     .mainSmallConts {
         height: 60vh;
+    }
+    .between {
+        margin: 20px 0;
+    }
+    .bigger {
+        font-size: 5rem;
+    }
+    .smaller {
+        font-size: 3.5rem;
+    }
+    .wrapper {
+        height: 350px;
+    }
+    .item {
+        height: 350px;
+        border-radius: 20px;
+        width: 450px;
+        left: max(calc(450px * 4), 100%);
+    }
+    .item img {
+        width: 100px;
+        height: 100px;
+    }
+    .item h1 {
+        font-size: 2.25rem;
+    }
+    .item p {
+        font-size: 1.75rem;
+    }
+    .stars {
+        font-size: 1.5rem;
     }
 }
