@@ -24,13 +24,29 @@ body, html {
     --textColorReverse: white;
     --buttonBgColor: hsl(0, 0%, 80%);
     --mainColor: #ffbccc;
-    --mainColorSlight: #ffbccc60;
+    --mainColorSlight: #ffbccc5d;
+    --mainColorExtraSlight: #ffbccc3f;
     --mainColorHover: #e6b4bf;
     --boxShadow: 3px 3px 10px hsla(0, 0%, 0%, 0.4);
 }
 
+button, button:focus, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .show {
     opacity: 1 !important;
+}
+
+.dropScroll {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: all .5s ease-in-out;
+}
+.dropShow {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .spans {
@@ -88,10 +104,12 @@ nav {
 }
 .featContent h1 {
     color: var(--textColorReverse);
+    font-family: "Roboto";
     font-size: 3rem;
 }
 .featContent p {
     color: var(--textColorReverse);
+    font-family: "Inter";
     line-height: 1;
     font-size: 2rem;
 }
@@ -146,6 +164,7 @@ h1 {
     color: var(--textColor);
     background-color: transparent;
 }
+
 .navBtns::after, .navBtns::before {
     content: "";
     position: absolute;
@@ -291,10 +310,13 @@ h1 {
     z-index: 3;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .starsUl {
     display: flex;
     gap: 5px;
-    list-style-type: none;
     padding: 0;
 }
 .stars {
@@ -315,9 +337,10 @@ h1 {
     position: relative;
     width: 100%;
     height: 400px;
+    opacity: 0;
     margin: 4vw 0;
     overflow-x: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
     mask-image: linear-gradient(
         to right,
         rgba(0,0,0,0),
@@ -375,6 +398,113 @@ h1 {
 .item2 {animation-delay: calc(50s / 4 * (4 - 2) * -1);}
 .item3 {animation-delay: calc(50s / 4 * (4 - 3) * -1);}
 .item4 {animation-delay: calc(50s / 4 * (4 - 4) * -1);}
+
+/*
+.section3 {
+    background-color: grey;
+}*/
+
+.cards {
+    position: relative;
+    margin: auto;
+    height: 800px;
+    width: 700px;
+    overflow: hidden;
+    padding: 60px;
+    border-radius: 50px;
+    background-color: var(--bgColorReverse);
+}
+
+.cards::before {
+    content: "";
+    position: absolute;
+    top: var(--cardY);
+    left: var(--cardX);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--mainColorExtraSlight), transparent, transparent);
+    width: 1400px;
+    pointer-events: none;
+    height: 1400px;
+    transition: 0.4s, top 0s, left 0s;
+}
+.cards:hover::before {
+    opacity: 1;
+}
+
+.cards h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-family: "Roboto" sans-serif;
+    color: var(--textColorReverse);
+}
+
+.purchaseUl {
+    display: flex;
+    flex-direction: column;
+    list-style-type: circle;
+    padding-left: 30px;
+    gap: 40px;
+}
+.purchaseUl li {
+    font-family: "Inter";
+    font-size: 2rem;
+}
+.purchaseUl li:hover {
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+}
+
+.cardIcons {
+    font-size: 2rem;
+    color: var(--mainColor);
+    margin: 20px;
+}
+.prices {
+    position: absolute;
+    font-family: "Roboto" sans-serif;
+    top: 0;
+    right: 0;
+    letter-spacing: 4px;
+    margin: 54px 60px;
+    color: var(--textColorReverse);
+    font-size: 4.5rem;
+}
+.prices:hover {
+    letter-spacing: 10px;
+}
+.purchase {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    font-family: "Roboto";
+    margin: 60px;
+    padding: 2px 40px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 4px;
+    font-size: 2.25rem;
+}
+.purchase::before {
+    content: "";
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: inherit;
+    z-index: -1;
+    background-color: var(--mainColor);
+    transition: all .3s ease-in-out;
+}
+.purchase:hover::before, .purchase:focus::before {
+    transform: scaleX(1);
+}
+.nobreak {
+    white-space: nowrap;
+  }
 
 @keyframes scrollLeft {
     to{

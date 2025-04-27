@@ -1,3 +1,24 @@
+@media only screen and (max-width: 1560px) {
+    .cards {
+        height: 700px;
+        width: 600px;
+        border-radius: 45px;
+    }
+    .cards h1 {
+        font-size: 3.5rem;
+        margin-bottom: 40px;
+    }
+    .purchaseUl {
+        gap: 25px;
+    }
+    .purchaseUl li {
+        font-size: 1.75rem;
+    }
+    .prices {
+        font-size: 4rem;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .smallCont {
         width: 1050px;
@@ -37,6 +58,30 @@
     .featuresDivs {
         height: 700px;
     }
+    .cards {
+        height: 640px;
+        width: 500px;
+        border-radius: 40px;
+    }
+    .cards h1 {
+        font-size: 3.25rem;
+        margin-bottom: 30px;
+    }
+    .purchaseUl {
+        gap: 22px;
+        padding-left: 20px;
+    }
+    .purchaseUl li {
+        font-size: 1.6rem;
+    }
+    .purchase {
+        font-size: 2rem;
+        margin: 50px 60px;
+    }
+    .prices {
+        font-size: 3.75rem;
+        margin: 53px 55px;
+    }
 }
 
 
@@ -70,11 +115,43 @@
     }
 }
 
+@media only screen and (max-width: 1016px) {
+    .cards {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .prices {
+        margin: 53px 50px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .featContent {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85vw;
+        max-width: 500px;
+    }
+    .featContent h1 {
+        font-size: 3rem;
+    }
+    .featContent1 {
+        margin-left: 0;
+    }
+    .featContent3 {
+        margin-bottom: 0;
+    }
+    .featuresDivs {
+        height: 600px !important;
+    }
+}
+
 @media only screen and (max-width: 769px) {
     .featContent {
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 90vw;
+        width: 85vw;
+        max-width: 450px;
     }
     .featContent1 {
         margin-left: 0;
@@ -133,5 +210,55 @@
     }
     .stars {
         font-size: 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 580px) {
+    .cards {
+        width: 420px;
+        height: 600px;
+        padding: 45px;
+    }
+    .cards h1 {
+        font-size: 2.75rem;
+        margin-bottom: 25px;
+    }
+    .purchaseUl {
+        gap: 18px;
+        padding-left: 14px;
+    }
+    .purchaseUl li {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .purchase {
+        font-size: 1.6rem;
+        margin: 40px 50px;
+    }
+    .prices {
+        font-size: 3.2rem;
+        margin: 42px 50px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cards {
+        width: 90vw;
+        height: 570px;
+    }
+    .purchaseUl {
+        gap: 12px;
+    }
+    .cards h1 {
+        font-size: 2.5rem;
+        margin-bottom: 22px;
+    }
+    .purchaseUl li {
+        font-size: 1.3rem;
+    }
+    .prices {
+        font-size: 2.75rem;
+        margin: 43px 50px;
     }
 }
