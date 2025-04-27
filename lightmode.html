@@ -19,9 +19,10 @@
   <header>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid navWidth">
-          <span class="navbar-brand mb-0 h1">Navbar</span>
+          <span id="navbarText" class="navbar-brand mb-0 h1">Navbar</span>
 
           <div class="ms-auto">
+              <i class="fa-solid fa-bars bars"></i>
               <a href="#section3"><button class="btn navBtns">Product</button></a>
               <a href="#section2"><button class="btn navBtns">About</button></a>
               <button id="lastBtn" class="btn navBtns">Contact</button>
@@ -154,10 +155,10 @@
           <h1 class="dropScroll">Plan 1</h1>
           <h2 class="prices dropScroll">$99</h2>
           <ul class="purchaseUl">
-            <li class="dropScroll">Frontend <span class="nobreak">Design<i class="fa-solid fa-pen cardIcons"></i></span></li>
+            <li class="dropScroll">Frontend Design<i class="fa-solid fa-pen cardIcons"></i></li>
             <li class="dropScroll">1 month support<i class="fa-solid fa-headset cardIcons"></i></li>
             <li class="dropScroll">No Marketing<i class="fa-solid fa-chart-line cardIcons"></i></li>
-            <li class="dropScroll">Limited use of <span class="nobreak">service<i class="fa-solid fa-laptop cardIcons"></i></span></li>
+            <li class="dropScroll">Limited service<i class="fa-solid fa-laptop cardIcons"></i></li>
           </ul>
           <button class="purchase dropScroll">Buy</button>
         </div>
@@ -169,10 +170,55 @@
             <li class="dropScroll">Frontend + Backend<i class="fa-solid fa-pen cardIcons"></i></li>
             <li class="dropScroll">3 month support<i class="fa-solid fa-headset cardIcons"></i></li>
             <li class="dropScroll">Marketing<i class="fa-solid fa-chart-line cardIcons"></i></li>
-            <li class="dropScroll">Unlimited use of <span class="nobreak">service<i class="fa-solid fa-laptop cardIcons"></i></span></li>
+            <li class="dropScroll">Unlimited service<i class="fa-solid fa-laptop cardIcons"></i></li>
           </ul>
           <button class="purchase dropScroll">Buy</button>
         </div>
+    </div>
+
+    <!--Contact Section-->
+
+    <div class="between dropScroll">
+      <h1 class="bigger">Get In Touch</h1>
+      <h1 class="smaller"><span class="spans">Contact</span></h1>
+    </div>
+
+    <div class="row contactCont">
+      <div class="row middleCont">
+        <div class="col-md-6 contactDiv">
+          <h1 class="dropScroll">Lets Chat!</h1>
+          <p class="dropScroll">Ready to take your business online? I'm here to help! Whether you're starting from scratch or looking to refresh your current website, I'd love to work with you. Let's discuss how we can create a website that truly represents your brand!</p>
+          <div class="lines scrollLoad"></div>
+          <ul class="contactUl dropScroll">
+            <a href="https://tiktok.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-tiktok"></i></li></a>
+            <a href="https://facebook.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-facebook-f"></i></li></a>
+            <a href="https://linked.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-linkedin-in"></i></li></a>
+          </ul>
+        </div>
+
+        <div class="col-md-6 contactDiv">
+          <form action="" class="dropScroll">
+
+            <div class="userInfoCont">
+              <div class="input-wrapper">
+                <input id="firstName" type="text" name="customer_name" placeholder=" " required>
+                <label for="firstName">Name</label>
+              </div>
+            
+              <div id="lastWrapper" class="input-wrapper">
+                <input id="userEmail" type="text" name="customer_email" placeholder=" " required>
+                <label for="userEmail">Email</label>
+              </div>
+            </div>
+            
+            
+
+            <textarea id="text" name="customer_message" placeholder="What would you like to say?"></textarea>
+            <button id="submit" type="submit">Send</button>
+
+          </form>
+        </div>
+      </div>
     </div>
 
 

@@ -28,6 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 1 });
 
     dropElements.forEach(dropElement => observer2.observe(dropElement));
+
+    const loadElements = document.querySelectorAll(".scrollLoad");
+    const observer3 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 1) {
+                entry.target.classList.add("loadShow");
+            }
+        });
+    }, { threshold: 1 });
+
+    loadElements.forEach(loadElement => observer3.observe(loadElement));
 });
 
 let section2 = document.querySelector(".section2");

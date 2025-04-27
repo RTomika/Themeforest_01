@@ -22,7 +22,7 @@
           <span class="navbar-brand mb-0 h1">Navbar</span>
 
           <div class="ms-auto">
-              <button class="btn navBtns">Product</button>
+              <a href="#section3"><button class="btn navBtns">Product</button></a>
               <a href="#section2"><button class="btn navBtns">About</button></a>
               <button id="lastBtn" class="btn navBtns">Contact</button>
           </div>
@@ -43,34 +43,34 @@
       </div>
       <div class="col-md-6 mainSmallConts">
         <div class="imgCont">
-          <img src="Images/FMC.svg" alt="Logo">
+          <img src="Images/FMC.svg" alt="Logo" loading="lazy">
         </div>
       </div>
     </div>
   </div>
 
   <!--Features Section-->
-<div class="between">
+<div class="between dropScroll">
   <h1 class="bigger">What We Offer</h1>
   <h1 class="smaller"><span class="spans">Features</span></h1>
 </div>
 
     <div id="section2" class="row section2">
-      <div class="col-md-4 featuresDivs featureDiv1 scroll">
+      <div class="col-lg-4 featuresDivs featureDiv1 scroll">
         <div class="featContent featContent1 scroll">
           <i class="fa-solid fa-pen pen"></i>
           <h1>Easily Editable</h1>
           <p>Our content is made in a way that complete beginners are easily able to change the site's colors, texts, fonts, pictures, etc.</p>
         </div>
       </div>
-      <div class="col-md-4 featuresDivs featureDiv2">
+      <div class="col-lg-4 featuresDivs featureDiv2">
         <div class="featContent featContent2 scroll">
           <i class="fa-solid fa-bolt lightning"></i>
           <h1>Fast Performance</h1>
           <p>Our site is optimized to load in seconds, ensuring a smooth and seamless experience even on slower devices or networks.</p>
         </div>
       </div>
-      <div class="col-md-4 featuresDivs featureDiv3">
+      <div class="col-lg-4 featuresDivs featureDiv3">
         <div class="featContent featContent3 scroll">
           <i class="fa-solid fa-headset headset"></i>
           <h1>Friendly Support</h1>
@@ -81,17 +81,18 @@
 
     <!--Reviews-->
 
-    <div class="between">
+    <div class="between dropScroll">
       <h1 class="bigger">From The People</h1>
       <h1 class="smaller"><span class="spans">Reviews</span></h1>
     </div>
 
 
-    <div class="wrapper line">
+    <div class="wrapper line scroll">
+
       <div class="item item1">
-        <img src="Images/girl1.png" alt="Image of Tiffany">
-        <h1>Tiffany</h1>
-        <p>I really enjoyed your service for how easy it is to use and effective at the same time! Thank you!</p>
+        <img src="Images/girl1.webp" alt="Image of Tiffany" loading="lazy">
+        <h1>Tiffany</h1><br>
+        <p>I really enjoyed your service for how easy it is to use, and effective at the same time! Thank you!</p>
         <ul class="starsUl">
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -100,9 +101,10 @@
           <li><i class="fa-solid fa-star stars"></i></li>
         </ul>
       </div>
+
       <div class="item item2">
-        <img src="Images/guy2.png" alt="Image of Mark">
-        <h1>Mark</h1>
+        <img src="Images/guy2.webp" alt="Image of Mark" loading="lazy">
+        <h1>Mark</h1><br>
         <p>For the price, I doubt you can get any other service like this at the same quality! Support is fast and great too!</p>
         <ul class="starsUl">
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -112,9 +114,10 @@
           <li><i class="fa-solid fa-star-half stars"></i></li>
         </ul>
       </div>
+
       <div class="item item3">
-        <img src="Images/girl2.png" alt="Image of Chiara">
-        <h1>Chiara</h1>
+        <img src="Images/girl2.webp" alt="Image of Chiara" loading="lazy">
+        <h1>Chiara</h1><br>
         <p>Design was acceptable, but I personally think it could improve a bit. Overall, the service is usable.</p>
         <ul class="starsUl">
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -123,9 +126,10 @@
           <li><i class="fa-solid fa-star-half stars"></i></li>
         </ul>
       </div>
+
       <div class="item item4">
-        <img src="Images/guy1.png" alt="Image of John">
-        <h1>John</h1>
+        <img src="Images/guy1.webp" alt="Image of John" loading="lazy">
+        <h1>John</h1><br>
         <p>Thank you for making such a useful tool! I couldn't imagine my business without this service!</p>
         <ul class="starsUl">
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -135,6 +139,40 @@
           <li><i class="fa-solid fa-star stars"></i></li>
         </ul>
       </div>
+
+    </div>
+
+    <!--Purchase Section-->
+
+    <div class="between dropScroll">
+      <h1 class="bigger">Get Started Today</h1>
+      <h1 class="smaller"><span class="spans">Purchase</span></h1>
+    </div>
+
+    <div id="section3" class="row section3">
+        <div class="cards">
+          <h1 class="dropScroll">Plan 1</h1>
+          <h2 class="prices dropScroll">$99</h2>
+          <ul class="purchaseUl">
+            <li class="dropScroll">Frontend <span class="nobreak">Design<i class="fa-solid fa-pen cardIcons"></i></span></li>
+            <li class="dropScroll">1 month support<i class="fa-solid fa-headset cardIcons"></i></li>
+            <li class="dropScroll">No Marketing<i class="fa-solid fa-chart-line cardIcons"></i></li>
+            <li class="dropScroll">Limited use of <span class="nobreak">service<i class="fa-solid fa-laptop cardIcons"></i></span></li>
+          </ul>
+          <button class="purchase dropScroll">Buy</button>
+        </div>
+
+        <div class="cards">
+          <h1 class="dropScroll">Plan 2</h1>
+          <h2 class="prices dropScroll">$299</h2>
+          <ul class="purchaseUl">
+            <li class="dropScroll">Frontend + Backend<i class="fa-solid fa-pen cardIcons"></i></li>
+            <li class="dropScroll">3 month support<i class="fa-solid fa-headset cardIcons"></i></li>
+            <li class="dropScroll">Marketing<i class="fa-solid fa-chart-line cardIcons"></i></li>
+            <li class="dropScroll">Unlimited use of <span class="nobreak">service<i class="fa-solid fa-laptop cardIcons"></i></span></li>
+          </ul>
+          <button class="purchase dropScroll">Buy</button>
+        </div>
     </div>
 
 

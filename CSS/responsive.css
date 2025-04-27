@@ -2,7 +2,7 @@
     .cards {
         height: 700px;
         width: 600px;
-        border-radius: 45px;
+        border-radius: 18px;
     }
     .cards h1 {
         font-size: 3.5rem;
@@ -61,7 +61,7 @@
     .cards {
         height: 640px;
         width: 500px;
-        border-radius: 40px;
+        border-radius: 16px;
     }
     .cards h1 {
         font-size: 3.25rem;
@@ -123,6 +123,18 @@
     .prices {
         margin: 53px 50px;
     }
+    .middleCont h1 {
+        font-size: 3rem;
+    }
+    .middleCont p {
+        font-size: 1.5rem;
+    }
+    .lines {
+        margin: 25px 0;
+    }
+    .input-wrapper input, .input-wrapper label, #text, #text::placeholder {
+        font-size: 1.25rem;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -139,7 +151,7 @@
         margin-left: 0;
     }
     .featContent3 {
-        margin-bottom: 0;
+        height: fit-content;
     }
     .featuresDivs {
         height: 600px !important;
@@ -147,6 +159,9 @@
 }
 
 @media only screen and (max-width: 769px) {
+    nav {
+        margin-bottom: 100px;
+    }
     .featContent {
         top: 50%;
         transform: translate(-50%, -50%);
@@ -163,8 +178,7 @@
         height: 600px !important;
     }
     #mainContText {
-        bottom: 0;
-        height: 400px;
+        /*height: 400px;*/
         text-align: center;
         align-items: center;
     }
@@ -195,8 +209,9 @@
     .item {
         height: 350px;
         border-radius: 20px;
-        width: 450px;
-        left: max(calc(450px * 4), 100%);
+        width: 400px;
+        animation-duration: 140s;
+        left: max(calc(400px * 4), 100%);
     }
     .item img {
         width: 100px;
@@ -206,15 +221,38 @@
         font-size: 2.25rem;
     }
     .item p {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
+    .item1 {animation-delay: calc(140s / 4 * (4 - 1) * -1);}
+    .item2 {animation-delay: calc(140s / 4 * (4 - 2) * -1);}
+    .item3 {animation-delay: calc(140s / 4 * (4 - 3) * -1);}
+    .item4 {animation-delay: calc(140s / 4 * (4 - 4) * -1);}
     .stars {
         font-size: 1.5rem;
+    }
+    .contactCont {
+        height: 1200px;
+    }
+    .middleCont {
+        border-radius: 16px;
+        height: auto;
     }
 }
 
 
 @media only screen and (max-width: 580px) {
+    .navBtns {
+        display: none;
+    }
+    nav {
+        margin-bottom: 50px;
+    }
+    .bars {
+        display: block;
+    }
+    .mainSmallConts {
+        height: 50vh;
+    }
     .cards {
         width: 420px;
         height: 600px;
@@ -240,25 +278,91 @@
         font-size: 3.2rem;
         margin: 42px 50px;
     }
+    .middleCont {
+        padding: 20px;
+    }
+    .middleCont h1 {
+        font-size: 2.5rem;
+    }
+    .middleCont p {
+        font-size: 1.25rem;
+    }
+    .lines {
+        margin: 25px 0;
+    }
+    .contactIcons {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+    .input-wrapper input, .input-wrapper label, #text, #text::placeholder {
+        font-size: 1.15rem;
+    }
 }
 
 @media only screen and (max-width: 450px) {
+    #mainH1 {
+        width: 320px !important;
+        font-size: 2.25rem !important;
+    }
+    .navWidth {
+        padding: 0;
+    }
+    #navbarText {
+        font-size: 1rem;
+    }
+    .mainCont {
+        height: 700px;
+    }
+    nav {
+        margin-bottom: 0;
+    }
+    .mainSmallConts {
+        height: 40vh;
+    }
+    #subtext {
+        font-size: 1rem !important;
+        width: 320px !important;
+    }
+    #actionBtn {
+        font-size: 1.25rem;
+    }
+    .imgCont {
+        width: 85vw;
+        height: 85vw;
+    }
+    #mainContText {
+        padding-bottom: 0 !important;
+    }
+    .imgCont img {
+        height: 85vw;
+    }
+    .featContent h1 {
+        font-size: 2.25rem;
+    }
+    .featContent p {
+        font-size: 1.6rem;
+    }
     .cards {
         width: 90vw;
-        height: 570px;
+        height: 530px;
+        padding: 40px;
     }
     .purchaseUl {
-        gap: 12px;
+        gap: 10px;
     }
     .cards h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         margin-bottom: 22px;
+    }
+    .purchase {
+        font-size: 1.25rem;
+        margin: 40px;
     }
     .purchaseUl li {
         font-size: 1.3rem;
     }
     .prices {
-        font-size: 2.75rem;
-        margin: 43px 50px;
+        font-size: 2.25rem;
+        margin: 40px 50px;
     }
 }
