@@ -13,15 +13,19 @@ body, html {
 
 .darkmode {
     --textColor: white;
+    --inputBg: hsl(0, 0%, 24%);
     --bgColor: hsl(0, 0%, 10%);
     --buttonBgColor: hsl(0, 0%, 20%);
+    --inputLabelFocus: hsl(0, 0%, 75%);
     --boxShadow: 2px 2px 12px hsla(0, 0%, 95%, 0.4);
 }
 :root {
     --bgColor: hsl(0, 0%, 92%);
+    --inputBg: hsl(0, 0%, 100%);
     --bgColorReverse: hsl(0, 0%, 10%);
     --textColor: black;
     --textColorReverse: white;
+    --inputLabelFocus: hsl(0, 0%, 40%);
     --buttonBgColor: hsl(0, 0%, 80%);
     --mainColor: #ffbccc;
     --mainColorSlight: #ffbccc5d;
@@ -34,15 +38,12 @@ button, button:focus, .btn:focus {
     outline: none;
     box-shadow: none;
 }
-
 a {
     text-decoration: none;
     color: transparent;
 }
 
-.show {
-    opacity: 1 !important;
-}
+.show { opacity: 1 !important; }
 
 .dropScroll {
     opacity: 0;
@@ -54,113 +55,11 @@ a {
     transform: translateY(0);
 }
 
-.spans {
-    color: var(--mainColor);
-}
+.spans { color: var(--mainColor); }
 
-nav {
-    color: var(--textColor);
-}
-.navWidth {
-    width: 1400px;
-}
+nav { color: var(--textColor); }
 
-.mainH1 {
-    font-family: "Roboto", sans-serif;
-}
-#subtext {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-}
-
-.divs {
-    padding: 40px;
-    height: 100vh;
-}
-.featuresDivs {
-    position: relative;
-    height: 140vh !important;
-    /*border: 3px solid white;*/
-}
-.featContent {
-    position: absolute;
-    width: 30vw;
-    opacity: 0;
-    /*height: 400px;*/
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 30px 20px;
-    backdrop-filter: blur(8px);
-    border: 2px solid rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    background-color: hsl(0, 0%, 15%);
-    transition: all .3s ease-in-out;
-}
-.featContent:hover {
-    background-color: hsla(0, 0%, 15%, 0.4);
-    border: 2px solid white;
-}
-
-.featContent i {
-    font-size: 2.75rem;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    color: var(--mainColor);
-}
-.featContent h1 {
-    color: var(--textColorReverse);
-    font-family: "Roboto";
-    font-size: 3rem;
-}
-.featContent p {
-    color: var(--textColorReverse);
-    font-family: "Inter";
-    line-height: 1;
-    font-size: 2rem;
-}
-
-.featContent1 {
-    margin-top: 60px;
-    margin-left: 30px;
-}
-.featContent2 {
-    top: 50%;
-    transform: translate(-50%, -50%)
-}
-.featContent3 {
-    bottom: 0;
-    margin-bottom: 60px;
-}
-
-.section2 {
-    position: relative;
-    background-color: var(--bgColorReverse);
-    overflow: hidden !important;
-}
-.section2::before {
-    content: "";
-    position: absolute;
-    opacity: 0;
-    top: var(--y);
-    left: var(--x);
-    transform: translate(-50%, -50%);
-    background: radial-gradient(var(--mainColorSlight), transparent, transparent);
-    width: 3500px;
-    height: 3500px;
-    transition: 0.4s, top 0.1s, left 0.1s;
-}
-.section2:hover::before {
-    opacity: 1;
-}
-
-h1 {
-    font-size: 2rem;
-    color: var(--textColor);
-}
-
-#container {
-    display: flex;
-}
+.navWidth { width: 1400px; }
 
 .bars {
     display: none;
@@ -208,6 +107,91 @@ h1 {
     margin-right: 0 !important;
 }
 
+.mainH1 { font-family: "Roboto", sans-serif; }
+
+#subtext {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+.divs {
+    padding: 40px;
+    height: 100vh;
+}
+.featuresDivs {
+    position: relative;
+    height: 140vh;
+}
+.featContent {
+    position: absolute;
+    width: 30vw;
+    max-width: 600px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 20px;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 15%);
+    transition: all .3s ease-in-out;
+}
+.featContent:hover {
+    background-color: hsla(0, 0%, 15%, 0.4);
+    border: 2px solid white;
+}
+
+.featContent i {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: var(--mainColor);
+}
+.featContent h2 {
+    color: var(--textColorReverse);
+    font-family: "Roboto";
+    font-size: 3rem;
+}
+.featContent p {
+    color: var(--textColorReverse);
+    font-family: "Inter";
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.featContent1 {
+    margin-top: 60px;
+}
+.featContent2 {
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+.featContent3 {
+    bottom: 0;
+    margin-bottom: 60px;
+}
+
+.section2 {
+    position: relative;
+    background-color: var(--bgColorReverse);
+    overflow: hidden !important;
+}
+.section2::before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(var(--mainColorSlight), transparent, transparent);
+    width: 3500px;
+    height: 3500px;
+    transition: 0.4s, top 0.1s, left 0.1s;
+}
+.section2:hover::before {
+    opacity: 1;
+}
+
 .mainCont {
     position: relative;
     align-items: center;
@@ -219,8 +203,6 @@ h1 {
     pointer-events: none;
     width: 1400px;
     transform: translateX(-50%);
-    /*border: 5px solid rgba(147, 59, 158, 0.589);*/
-    padding: 0 !important;
 }
 
 .mainSmallConts {
@@ -229,12 +211,10 @@ h1 {
     width: 100%;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     pointer-events: none;
     flex-direction: column;
     justify-content: center;
     height: 70vh;
-    /*border: 1px solid black;*/
 }
 
 .row {
@@ -263,22 +243,22 @@ h1 {
     display: flex;
     width: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
-    /*background-color: gray;*/
     color: var(--textColor);
     text-align: left !important;
 }
-#mainContText h1 {
+#mainH1 {
     font-size: 5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     font-family: "Roboto";
+    pointer-events: all;
     transition: all .3s ease-in-out;
 }
-#mainContText h2 {
+#subtext {
     font-size: 2rem;
     margin-bottom: 20px;
     width: 700px;
+    pointer-events: all;
     transition: all .3s ease-in-out;
 }
 
@@ -294,6 +274,7 @@ h1 {
 #actionBtn:hover {
     box-shadow: var(--boxShadow);
 }
+
 .between {
     position: relative;
     width: 100%;
@@ -301,7 +282,6 @@ h1 {
     height: 200px;
     text-align: center;
 }
-
 .bigger, .smaller {
     position: absolute;
     font-family: "Roboto";
@@ -309,8 +289,8 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
 .bigger {
+    color: var(--textColor);
     font-size: 9rem;
     width: 1500px;
     opacity: 0.04;
@@ -328,9 +308,7 @@ h1 {
     z-index: 3;
 }
 
-ul {
-    list-style-type: none;
-}
+ul { list-style-type: none; }
 
 .starsUl {
     display: flex;
@@ -344,7 +322,7 @@ ul {
     transition: all .2s ease-in-out;
 }
 .stars:hover {
-    color: rgb(245, 204, 71);
+    color: rgb(243, 203, 71);
     transform: scale(1.05);
 }
 
@@ -352,11 +330,11 @@ ul {
 .wrapper {
     position: relative;
     border: none;
-    position: relative;
     width: 100%;
+    max-width: 2000px;
     height: 400px;
     opacity: 0;
-    margin: 4vw 0;
+    margin: 4vw auto;
     overflow-x: hidden;
     transition: all 2s ease-in-out;
     mask-image: linear-gradient(
@@ -375,13 +353,10 @@ ul {
     left: max(calc(500px * 4), 100%);
     background-color: var(--mainColor);
     border-radius: 25px;
-    animation-name: scrollLeft;
-    animation-timing-function: linear;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
     padding: 40px;
     color: black !important;
     transition: all .3s ease-in-out;
+    animation: scrollLeft 50s linear infinite;
 }
 .item h1 {
     color: black;
@@ -417,15 +392,20 @@ ul {
 .item3 {animation-delay: calc(50s / 4 * (4 - 3) * -1);}
 .item4 {animation-delay: calc(50s / 4 * (4 - 4) * -1);}
 
+.section3 {
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+}
 
 .cards {
     position: relative;
     margin: auto;
     height: 800px;
-    width: 700px;
+    width: 600px;
     overflow: hidden;
-    padding: 60px;
-    border-radius: 20px;
+    padding: 50px;
+    border-radius: 30px;
     background-color: var(--bgColorReverse);
 }
 
@@ -448,7 +428,7 @@ ul {
 
 .cards h1 {
     font-size: 4rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-family: "Roboto" sans-serif;
     color: var(--textColorReverse);
 }
@@ -458,12 +438,12 @@ ul {
     flex-direction: column;
     list-style-type: circle;
     padding-left: 30px;
-    gap: 40px;
+    gap: 20px;
 }
 .purchaseUl li {
     font-family: "Inter";
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 .purchaseUl li:hover {
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
@@ -475,14 +455,11 @@ ul {
     margin: 20px;
 }
 .prices {
-    position: absolute;
+    position: relative;
     font-family: "Roboto" sans-serif;
-    top: 0;
-    right: 0;
-    letter-spacing: 4px;
-    margin: 54px 60px;
     color: var(--textColorReverse);
-    font-size: 4.5rem;
+    font-size: 3.25rem;
+    margin-bottom: 40px;
 }
 .prices:hover {
     letter-spacing: 10px;
@@ -494,11 +471,11 @@ ul {
     border: none;
     outline: none;
     font-family: "Roboto";
-    margin: 60px;
+    margin: 50px;
     padding: 2px 40px;
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 60%);
     border-radius: 4px;
-    font-size: 2.25rem;
+    font-size: 2.2rem;
 }
 .purchase::before {
     content: "";
@@ -538,7 +515,7 @@ ul {
     background-color: var(--bgColor);
 }
 .middleCont h1 {
-    font-size: 3.25rem;
+    font-size: 3rem;
     font-family: "Roboto" sans-serif;
 }
 .middleCont p {
@@ -556,15 +533,22 @@ ul {
   .input-wrapper input {
     width: 100%;
     padding: 12px 8px;
+    background-color: var(--inputBg);
+    color: var(--textColor);
     outline: none;
     font-family: "Roboto" sans-serif;
     font-size: 1.5rem;
-    border: none;
+    border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 6px;
+    transition: border .2s ease-in-out;
+  }
+  .input-wrapper input:focus {
+    border-bottom: 2px solid var(--mainColor);
   }
 
   .input-wrapper label {
     position: absolute;
+    color: var(--textColorReverse);
     left: 10px;
     top: 12px;
     background: transparent;
@@ -580,7 +564,7 @@ ul {
     top: -16px;
     left: 10px;
     font-size: 1.25rem;
-    color: #636363;
+    color: var(--inputLabelFocus);
   }
   
   .input-wrapper input::placeholder {
@@ -592,14 +576,21 @@ ul {
     padding: 15px;
     width: 100%;
     height: 300px;
+    color: var(--textColor);
     outline: none;
+    background-color: var(--inputBg);
     font-family: "Inter" sans-serif;
-    border: none;
+    border: 2px solid rgba(0, 0, 0, 0);
     resize: none;
     border-radius: 6px;
     margin-bottom: 55px;
+    transition: border .2s ease-in-out;
+}
+#text:focus {
+    border-bottom: 2px solid var(--mainColor);
 }
 #text::placeholder {
+    color: hsl(0, 0%, 65%);
     font-size: 1.5rem;
 }
 
@@ -609,10 +600,11 @@ ul {
 .lines {
     position: relative;
     height: 4px;
+    max-width: 2000px;
     width: 0;
     border-radius: 4px;
     background-color: var(--mainColor);
-    margin: 30px 0;
+    margin: 30px auto;
     transition: all .5s ease-in-out;
 }
 .lines::after {
@@ -636,7 +628,7 @@ ul {
     border: none;
     z-index: 1;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--inputBg);
 }
 #submit::after {
     content: "";
@@ -688,6 +680,64 @@ ul {
 }
 .contactIcons:hover::after {
     transform: scaleX(1);
+}
+
+.footer {
+    margin-top: 100px;
+    background-color: var(--bgColorReverse);
+}
+.footerLogo {
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.footerIconsUl {
+    display: flex;
+    width: fit-content !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+}
+.footerIcons {
+    color: hsl(0, 0%, 80%);
+    font-size: 1.6rem !important;
+}
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footerLi {
+    position: relative;
+    white-space: nowrap;
+    color: hsl(0, 0%, 80%);
+    text-decoration: none !important;
+    transition: all .2s ease-in-out;
+}
+.footerLi:hover {
+    color: white;
+}
+.footerLi::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: var(--mainColor);
+    transition: all .2s ease-in-out;
+}
+.footerLi:hover::after {
+    transform: scaleX(1);
+}
+.footerPad {
+    padding-inline: 20px;
+}
+.footerUl {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 @keyframes scrollLeft {
