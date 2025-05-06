@@ -15,6 +15,7 @@ body, html {
     --textColor: white;
     --inputBg: hsl(0, 0%, 24%);
     --bgColor: hsl(0, 0%, 10%);
+    --border: 1px solid hsla(0, 0%, 100%, 0.8);
     --buttonBgColor: hsl(0, 0%, 20%);
     --inputLabelFocus: hsl(0, 0%, 75%);
     --boxShadow: 2px 2px 12px hsla(0, 0%, 95%, 0.4);
@@ -43,7 +44,20 @@ a {
     color: transparent;
 }
 
-.show { opacity: 1 !important; }
+.offCanvasUl {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+.offCanvasBtn {
+    font-size: 1.25rem;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    border-radius: 4px;
+}
+
+.showNormal { opacity: 1 !important; }
 
 .dropScroll {
     opacity: 0;
@@ -57,14 +71,20 @@ a {
 
 .spans { color: var(--mainColor); }
 
-nav { color: var(--textColor); }
-
 .navWidth { width: 1400px; }
+
+#navbarText {
+    color: var(--textColor);
+}
+
+.navbar {
+    background-color: var(--bgColor) !important;
+}
 
 .bars {
     display: none;
     font-size: 2rem;
-    color: black;
+    color: var(--textColor);
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
@@ -103,7 +123,7 @@ nav { color: var(--textColor); }
     color: var(--textColor);
 }
 
-#lastBtn {
+.lastBtn {
     margin-right: 0 !important;
 }
 
@@ -200,21 +220,22 @@ nav { color: var(--textColor); }
 .smallCont {
     position: absolute;
     left: 50%;
+    top: 50%;
     pointer-events: none;
+    display: flex;
     width: 1400px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
 }
 
 .mainSmallConts {
     position: relative;
     font-size: 5rem;
-    width: 100%;
     align-items: center;
     display: flex;
     pointer-events: none;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: 65vh;
 }
 
 .row {
@@ -312,9 +333,11 @@ ul { list-style-type: none; }
 
 .starsUl {
     display: flex;
+    align-items: center;
     gap: 5px;
     padding: 0;
 }
+
 .stars {
     color: rgb(231, 189, 52);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -392,6 +415,12 @@ ul { list-style-type: none; }
 .item3 {animation-delay: calc(50s / 4 * (4 - 3) * -1);}
 .item4 {animation-delay: calc(50s / 4 * (4 - 4) * -1);}
 
+.ratings {
+    font-size: 2rem;
+    margin-right: 5px;
+    font-family: "Roboto" sans-serif;
+}
+
 .section3 {
     width: 100%;
     max-width: 2000px;
@@ -403,6 +432,7 @@ ul { list-style-type: none; }
     margin: auto;
     height: 800px;
     width: 600px;
+    border: var(--border);
     overflow: hidden;
     padding: 50px;
     border-radius: 30px;
@@ -460,9 +490,6 @@ ul { list-style-type: none; }
     color: var(--textColorReverse);
     font-size: 3.25rem;
     margin-bottom: 40px;
-}
-.prices:hover {
-    letter-spacing: 10px;
 }
 .purchase {
     position: absolute;
@@ -684,6 +711,7 @@ ul { list-style-type: none; }
 
 .footer {
     margin-top: 100px;
+    border-top: var(--border);
     background-color: var(--bgColorReverse);
 }
 .footerLogo {

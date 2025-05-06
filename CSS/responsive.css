@@ -139,8 +139,10 @@
     .featuresDivs {
         height: 600px !important;
     }
+    .mainSmallConts {
+        width: 100%;
+    }
     #mainContText {
-        /*height: 400px;*/
         text-align: center;
         align-items: center;
     }
@@ -279,9 +281,6 @@
         width: 320px !important;
         font-size: 2.25rem !important;
     }
-    .navWidth {
-        padding: 0;
-    }
     #navbarText {
         font-size: 1rem;
     }
@@ -311,7 +310,7 @@
     .imgCont img {
         height: 85vw;
     }
-    .featContent h1 {
+    .featContent h2 {
         font-size: 2.25rem;
     }
     .featContent p {

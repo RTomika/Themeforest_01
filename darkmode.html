@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
@@ -15,6 +15,25 @@
 </head>
 <body class="darkmode">
 
+  <!--Offcanvas-->
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+      </div>
+      <ul class="offCanvasUl">
+        <a href="#section3"><button class="btn offCanvasBtn">Product</button></a>
+        <a href="#section2"><button class="btn offCanvasBtn">About</button></a>
+        <a href="#section4"><button class="btn offCanvasBtn">Contact</button></a>
+      </ul>
+    </div>
+  </div>
+
   <!--Navbar-->
   <header>
     <nav class="navbar bg-body-tertiary">
@@ -22,18 +41,19 @@
           <span id="navbarText" class="navbar-brand mb-0 h1">Navbar</span>
 
           <div class="ms-auto">
-              <i class="fa-solid fa-bars bars"></i>
+              <i class="fa-solid fa-bars bars"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
               <a href="#section3"><button class="btn navBtns">Product</button></a>
               <a href="#section2"><button class="btn navBtns">About</button></a>
-              <button id="lastBtn" class="btn navBtns">Contact</button>
+              <a href="#section4"><button class="btn navBtns lastBtn">Contact</button></a>
           </div>
       </div>
     </nav>
   </header>
 
   <!--Hero Section-->
-    
-  <div class="row divs mainCont">
+
+
+  <div class="container-fluid divs mainCont">
     <div class="row smallCont">
       <div class="col-md-6 mainSmallConts">
         <div id="mainContText">
@@ -49,6 +69,8 @@
       </div>
     </div>
   </div>
+  
+ 
 
   <!--Features Section-->
 <div class="between dropScroll">
@@ -56,29 +78,31 @@
   <h1 class="smaller"><span class="spans">Features</span></h1>
 </div>
 
-    <div id="section2" class="row section2">
-      <div class="col-lg-4 featuresDivs featureDiv1 scroll">
-        <div class="featContent featContent1 scroll">
-          <i class="fa-solid fa-pen pen"></i>
-          <h1>Easily Editable</h1>
-          <p>Our content is made in a way that complete beginners are easily able to change the site's colors, texts, fonts, pictures, etc.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 featuresDivs featureDiv2">
-        <div class="featContent featContent2 scroll">
-          <i class="fa-solid fa-bolt lightning"></i>
-          <h1>Fast Performance</h1>
-          <p>Our site is optimized to load in seconds, ensuring a smooth and seamless experience even on slower devices or networks.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 featuresDivs featureDiv3">
-        <div class="featContent featContent3 scroll">
-          <i class="fa-solid fa-headset headset"></i>
-          <h1>Friendly Support</h1>
-          <p>We're here to help with quick, clear answers — whether you're stuck on a feature or just have a question, our team is always happy to assist.</p>
-        </div>
+
+  <div id="section2" class="row section2">
+    <div class="col-lg-4 featuresDivs featureDiv1 scroll">
+      <div class="featContent featContent1 scroll">
+        <i class="fa-solid fa-pen pen"></i>
+        <h2>Easily Editable</h2>
+        <p>Our content is made in a way that complete beginners are easily able to change the site's colors, texts, fonts, pictures, etc.</p>
       </div>
     </div>
+    <div class="col-lg-4 featuresDivs featureDiv2">
+      <div class="featContent featContent2 scroll">
+        <i class="fa-solid fa-bolt lightning"></i>
+        <h2>Fast Performance</h2>
+        <p>Our site is optimized to load in seconds, ensuring a smooth and seamless experience even on slower devices or networks.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 featuresDivs featureDiv3">
+      <div class="featContent featContent3 scroll">
+        <i class="fa-solid fa-headset headset"></i>
+        <h2>Friendly Support</h2>
+        <p>We're here to help with quick, clear answers — whether you're stuck on a feature or just have a question, our team is always happy to assist.</p>
+      </div>
+    </div>
+  </div>
+    
 
     <!--Reviews-->
 
@@ -95,6 +119,7 @@
         <h1>Tiffany</h1><br>
         <p>I really enjoyed your service for how easy it is to use, and effective at the same time! Thank you!</p>
         <ul class="starsUl">
+          <li class="ratings">5.0</li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -108,6 +133,7 @@
         <h1>Mark</h1><br>
         <p>For the price, I doubt you can get any other service like this at the same quality! Support is fast and great too!</p>
         <ul class="starsUl">
+          <li class="ratings">4.5</li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -121,6 +147,7 @@
         <h1>Chiara</h1><br>
         <p>Design was acceptable, but I personally think it could improve a bit. Overall, the service is usable.</p>
         <ul class="starsUl">
+          <li class="ratings">3.5</li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -133,6 +160,7 @@
         <h1>John</h1><br>
         <p>Thank you for making such a useful tool! I couldn't imagine my business without this service!</p>
         <ul class="starsUl">
+          <li class="ratings">5.0</li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
           <li><i class="fa-solid fa-star stars"></i></li>
@@ -142,6 +170,7 @@
       </div>
 
     </div>
+
 
     <!--Purchase Section-->
 
@@ -182,8 +211,9 @@
       <h1 class="bigger">Get In Touch</h1>
       <h1 class="smaller"><span class="spans">Contact</span></h1>
     </div>
+    <div class="lines scrollLoad"></div>
 
-    <div class="row contactCont">
+    <div id="section4" class="row contactCont">
       <div class="row middleCont">
         <div class="col-md-6 contactDiv">
           <h1 class="dropScroll">Lets Chat!</h1>
@@ -221,8 +251,53 @@
       </div>
     </div>
 
+    <!--Footer-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+    
+          <div class="col-md-4 mb-3 footerPad">
+            <img class="footerLogo" src="Images/FMC.svg" alt="Logo">
+            <p class="mt-2">The easiest way to manage your business online.</p>
+          </div>
+    
+          <div class="col-md-2 mb-3 footerPad">
+            <h5>Company</h5>
+            <ul class="footerUl">
+              <li><a class="footerLi" href="#">About</a></li>
+              <li><a class="footerLi" href="#">Features</a></li>
+              <li><a class="footerLi" href="#">Pricing</a></li>
+              <li><a class="footerLi" href="#">Contact</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-2 mb-3 footerPad">
+            <h5>Resources</h5>
+            <ul class="footerUl">
+              <li><a class="footerLi" href="#">Privacy Policy</a></li>
+              <li><a class="footerLi" href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-4 mb-3 footerPad">
+            <h5>Follow Us</h5>
+            <ul class="contactUl footerIconsUl">
+              <a href="https://tiktok.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-tiktok"></i></li></a>
+              <a href="https://facebook.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-facebook-f"></i></li></a>
+              <a href="https://linked.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-linkedin-in"></i></li></a>
+            </ul>
+          </div>
+    
+        </div>
+        <div class="text-center pt-5">
+          <small>© 2025 YourCompany. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    
+
     <script src="JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

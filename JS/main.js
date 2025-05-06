@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-                entry.target.classList.add("show");
+                entry.target.classList.add("showNormal");
             }
         });
     }, { threshold: 0.6 });
@@ -61,3 +61,13 @@ cards.forEach(card => {
         card.style.setProperty('--cardY', cardY + 'px');
     }
 })
+
+document.querySelectorAll('.offCanvasBtn').forEach(button => {
+    button.addEventListener('click', function () {
+      const offcanvasEl = document.getElementById('offcanvasExample');
+      const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      if (offcanvas) {
+        offcanvas.hide();
+      }
+    });
+  });
