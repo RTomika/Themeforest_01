@@ -27,10 +27,10 @@
         <p>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
       </div>
       <ul class="offCanvasUl">
-        <a href="#section3"><button class="btn offCanvasBtn">Product</button></a>
-        <a href="#section2"><button class="btn offCanvasBtn">About</button></a>
-        <a href="#section4"><button class="btn offCanvasBtn">Contact</button></a>
-      </ul>
+        <li><a href="#section2" class="btn offCanvasBtn">Product</a></li>
+        <li><a href="#section3" class="btn offCanvasBtn">About</a></li>
+        <li><a href="#section4" class="btn offCanvasBtn">Contact</a></li>
+      </ul>      
     </div>
   </div>
 
@@ -41,10 +41,12 @@
           <span id="navbarText" class="navbar-brand mb-0 h1">Navbar</span>
 
           <div class="ms-auto">
-              <i class="fa-solid fa-bars bars"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
-              <a href="#section3"><button class="btn navBtns">Product</button></a>
-              <a href="#section2"><button class="btn navBtns">About</button></a>
-              <a href="#section4"><button class="btn navBtns lastBtn">Contact</button></a>
+              <a class="bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+              </a>
+              <a href="#section3" class="btn navBtns">Product</a>
+              <a href="#section2" class="btn navBtns">About</a>
+              <a href="#section4" class="btn navBtns lastBtn">Contact</a>
           </div>
       </div>
     </nav>
@@ -214,14 +216,26 @@
           <p class="dropScroll">Ready to take your business online? I'm here to help! Whether you're starting from scratch or looking to refresh your current website, I'd love to work with you. Let's discuss how we can create a website that truly represents your brand!</p>
           <div class="lines scrollLoad"></div>
           <ul class="contactUl dropScroll">
-            <a href="https://tiktok.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-tiktok"></i></li></a>
-            <a href="https://facebook.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-facebook-f"></i></li></a>
-            <a href="https://linked.com" target="_blank"><li class="contactIcons"><i class="fa-brands fa-linkedin-in"></i></li></a>
-          </ul>
+            <li class="contactIcons">
+              <a href="https://tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+            <li class="contactIcons">
+              <a href="https://facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="contactIcons">
+              <a href="https://linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>          
         </div>
 
         <div class="col-md-6 contactDiv">
-          <form action="" class="dropScroll">
+          <form action="index.php" class="dropScroll">
 
             <div class="userInfoCont">
               <div class="input-wrapper">
@@ -273,14 +287,27 @@
               <li><a class="footerLi" href="#">Terms of Service</a></li>
             </ul>
           </div>
-    
+          
           <div class="col-md-4 mb-3 footerPad">
             <h5>Follow Us</h5>
             <ul class="contactUl footerIconsUl">
-              <a href="https://tiktok.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-tiktok"></i></li></a>
-              <a href="https://facebook.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-facebook-f"></i></li></a>
-              <a href="https://linked.com" target="_blank"><li class="contactIcons footerIcons"><i class="fa-brands fa-linkedin-in"></i></li></a>
+              <li class="contactIcons footerIcons">
+                <a href="https://tiktok.com" target="_blank">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+              <li class="contactIcons footerIcons">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="contactIcons footerIcons">
+                <a href="https://linkedin.com" target="_blank">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
             </ul>
+            
           </div>
     
         </div>

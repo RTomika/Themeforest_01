@@ -120,7 +120,7 @@
         width: 100%;
     }
     .mainCont {
-        height: 80vh;
+        height: 90vh;
     }
     #mainContText {
         text-align: center;
@@ -136,7 +136,7 @@
         width: 90vw;
     }
     .mainSmallConts {
-        height: 40vh;
+        height: 60vh;
     }
     .between {
         margin: 20px 0;
@@ -277,7 +277,7 @@
         margin-bottom: 0;
     }
     .mainSmallConts {
-        height: 40vh;
+        height: 350px;
     }
     #subtext {
         font-size: 1rem !important;

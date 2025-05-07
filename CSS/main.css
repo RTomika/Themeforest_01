@@ -41,7 +41,7 @@ button, button:focus, .btn:focus {
 }
 a {
     text-decoration: none;
-    color: transparent;
+    color: inherit;
 }
 
 .offCanvasUl {
@@ -52,6 +52,7 @@ a {
 }
 .offCanvasBtn {
     font-size: 1.25rem;
+    z-index: 11;
     color: var(--textColor);
     background-color: var(--bgColor);
     border-radius: 4px;
@@ -686,8 +687,8 @@ ul { list-style-type: none; }
 .contactIcons {
     position: relative;
     color: var(--textColor);
-    font-size: 2.2rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 2.2rem;/*
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);*/
     cursor: pointer;
     transition: all .2s ease-in-out;
 }

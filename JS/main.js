@@ -63,11 +63,21 @@ cards.forEach(card => {
 })
 
 document.querySelectorAll('.offCanvasBtn').forEach(button => {
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const target = this.getAttribute('href');
       const offcanvasEl = document.getElementById('offcanvasExample');
       const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+  
       if (offcanvas) {
         offcanvas.hide();
+  
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', function handler() {
+          offcanvasEl.removeEventListener('hidden.bs.offcanvas', handler);
+          document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+        });
       }
     });
   });
+  
